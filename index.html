@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Iglesia Cristiana Ciudad de Refugio: un lugar para conocer a Jesús, crecer en la fe y vivir el amor de Dios en comunidad." />
+  <meta name="theme-color" content="#14324a" />
+  <title>Iglesia Cristiana Ciudad de Refugio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/logo.svg" alt="" width="46" height="46">
+        <span>
+          <strong>Ciudad de Refugio</strong>
+          <small>Iglesia Cristiana</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="menu" id="main-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#predicaciones">Predicaciones</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Bienvenido a casa</p>
+        <h1>Iglesia Cristiana<br><span>Ciudad de Refugio</span></h1>
+        <p class="hero-text">Un lugar para conocer a Jesús, crecer en la fe y caminar en comunidad.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#horarios">Ver horarios</a>
+          <a class="button button-secondary" href="#eventos">Próximos eventos</a>
+        </div>
+        <div class="next-service" id="next-service" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="welcome section">
+      <div class="container split">
+        <div>
+          <p class="section-kicker">Todos son bienvenidos</p>
+          <h2>Un refugio para tu vida y una familia en Cristo</h2>
+        </div>
+        <div class="lead">
+          <p>Deseamos que cada persona encuentre esperanza, restauración y propósito por medio de Jesucristo.</p>
+          <p>Ven con tu familia y acompáñanos en nuestros servicios semanales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-bg" id="nosotros">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Nuestra identidad</p>
+          <h2>Nosotros</h2>
+          <p>Somos una comunidad cristiana comprometida con la Palabra de Dios, la oración y el servicio a las familias.</p>
+        </div>
+        <div class="cards three">
+          <article class="card">
+            <div class="icon">✦</div>
+            <h3>Nuestra misión</h3>
+            <p>Compartir el evangelio de Jesucristo, formar discípulos y servir con amor a nuestra comunidad.</p>
+          </article>
+          <article class="card">
+            <div class="icon">◉</div>
+            <h3>Nuestra visión</h3>
+            <p>Ser una iglesia que brinda refugio espiritual, fortalece familias y transforma generaciones.</p>
+          </article>
+          <article class="card">
+            <div class="icon">♡</div>
+            <h3>Nuestros valores</h3>
+            <p>Fe, amor, verdad, unidad, servicio, generosidad y compromiso con la enseñanza bíblica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="horarios">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Acompáñanos</p>
+          <h2>Horarios de reunión</h2>
+          <p>Tenemos un lugar para ti y tu familia.</p>
+        </div>
+        <div class="schedule-grid">
+          <article class="schedule-card">
+            <span class="day">Viernes</span>
+            <strong>7:00 PM</strong>
+            <p>Reunión de fe y oración</p>
+          </article>
+          <article class="schedule-card featured">
+            <span class="day">Domingo</span>
+            <strong>11:00 AM</strong>
+            <p>Servicio general</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="eventos">
+      <div class="container">
+        <div class="section-heading light">
+          <p class="section-kicker">Agenda</p>
+          <h2>Próximos eventos</h2>
+          <p>Esta lista se actualiza automáticamente con las próximas reuniones semanales.</p>
+        </div>
+        <div id="events-list" class="events-list" aria-live="polite"></div>
+        <p class="events-note">Para agregar congresos, bautismos o reuniones especiales, edita el arreglo <code>specialEvents</code> en <code>script.js</code>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Nuestra comunidad</p>
+          <h2>Galería</h2>
+          <p>Momentos de adoración, comunión y servicio.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item large"><img src="assets/gallery-1.svg" alt="Reunión de la iglesia"><figcaption>Celebrando juntos</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/gallery-2.svg" alt="Momento de oración"><figcaption>Tiempo de oración</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/gallery-3.svg" alt="Estudio bíblico"><figcaption>Aprendiendo la Palabra</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/gallery-4.svg" alt="Convivencia familiar"><figcaption>Familias en comunidad</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/gallery-5.svg" alt="Alabanza"><figcaption>Adoración</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-bg" id="predicaciones">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Mensaje para tu vida</p>
+          <h2>Predicaciones</h2>
+          <p>Reemplaza los enlaces de ejemplo por los videos del canal de YouTube de la iglesia.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-placeholder">
+              <span>▶</span>
+              <small>Video destacado</small>
+            </div>
+            <div class="video-copy">
+              <p class="tag">Mensaje dominical</p>
+              <h3>Jesús, nuestro refugio</h3>
+              <p>Una enseñanza acerca de encontrar descanso, dirección y esperanza en Dios.</p>
+              <a href="#" aria-label="Ver predicación Jesús, nuestro refugio">Ver predicación →</a>
+            </div>
+          </article>
+          <article class="video-card compact">
+            <div class="video-copy">
+              <p class="tag">Serie de fe</p>
+              <h3>Viviendo con propósito</h3>
+              <a href="#">Ver mensaje →</a>
+            </div>
+          </article>
+          <article class="video-card compact">
+            <div class="video-copy">
+              <p class="tag">Familia</p>
+              <h3>Un hogar edificado en Cristo</h3>
+              <a href="#">Ver mensaje →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Recursos</p>
+          <h2>Blog</h2>
+          <p>Reflexiones y enseñanzas para fortalecer tu vida espiritual.</p>
+        </div>
+        <div class="cards three blog-grid">
+          <article class="card blog-card">
+            <p class="tag">Fe</p>
+            <h3>¿Cómo fortalecer nuestra fe cada día?</h3>
+            <p>Hábitos sencillos que nos ayudan a permanecer cerca de Dios en medio de la vida cotidiana.</p>
+            <a href="#">Leer artículo →</a>
+          </article>
+          <article class="card blog-card">
+            <p class="tag">Oración</p>
+            <h3>La importancia de una vida de oración</h3>
+            <p>La oración no es solo una práctica: es una relación viva y constante con nuestro Padre.</p>
+            <a href="#">Leer artículo →</a>
+          </article>
+          <article class="card blog-card">
+            <p class="tag">Esperanza</p>
+            <h3>Jesús es nuestro refugio</h3>
+            <p>En tiempos difíciles podemos encontrar seguridad, paz y dirección en las promesas de Dios.</p>
+            <a href="#">Leer artículo →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">Estamos para servirte</p>
+          <h2>Contacto</h2>
+          <p class="lead">Nos dará mucho gusto conocerte, orar por ti y recibirte en nuestra próxima reunión.</p>
+          <div class="contact-list">
+            <p><strong>Dirección:</strong> Agrega aquí la dirección de la iglesia</p>
+            <p><strong>Teléfono:</strong> Agrega aquí el teléfono</p>
+            <p><strong>Correo:</strong> contacto@ciudadderefugio.org</p>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>Nombre
+            <input type="text" name="name" required placeholder="Tu nombre">
+          </label>
+          <label>Correo
+            <input type="email" name="email" required placeholder="nombre@correo.com">
+          </label>
+          <label>Mensaje
+            <textarea name="message" rows="5" required placeholder="¿Cómo podemos ayudarte?"></textarea>
+          </label>
+          <button type="submit" class="button button-primary">Enviar mensaje</button>
+          <p class="form-note" id="form-note">El formulario abrirá tu aplicación de correo. También puedes conectarlo después a Google Forms.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="brand footer-brand">
+        <img src="assets/logo.svg" alt="" width="48" height="48">
+        <span>
+          <strong>Ciudad de Refugio</strong>
+          <small>Iglesia Cristiana</small>
+        </span>
+      </div>
+      <p>Un refugio para tu vida y una familia en Cristo.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Iglesia Cristiana Ciudad de Refugio.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
