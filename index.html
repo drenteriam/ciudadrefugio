@@ -11,46 +11,78 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Video de Facebook responsivo */
-    .facebook-video {
-      position: relative;
+    /* Previene desbordamientos horizontales en toda la página */
+    html,
+    body {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #0b2234;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
-    .facebook-video iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
 
-    /* Evita que la tarjeta o el video se desborden */
+    /* La tarjeta y las columnas pueden reducirse en pantallas pequeñas */
+    .video-grid,
     .video-card,
     .facebook-video {
       min-width: 0;
       max-width: 100%;
     }
 
+    /* Contenedor responsivo del video */
+    .facebook-video {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #0b2234;
+    }
+
+    /* El iframe queda encerrado dentro del contenedor */
+    .facebook-video iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+
     @media (max-width: 900px) {
       .video-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
       }
 
+      .video-card,
       .video-card:first-child {
+        width: 100%;
+        max-width: 100%;
         grid-row: auto;
       }
     }
 
     @media (max-width: 640px) {
+      .section .container {
+        width: calc(100% - 28px);
+        max-width: 100%;
+      }
+
       .facebook-video {
+        width: 100%;
+        max-width: 100%;
         aspect-ratio: 16 / 9;
       }
 
       .video-copy {
-        padding: 22px;
+        padding: 20px;
       }
     }
   </style>
@@ -203,6 +235,8 @@
             <div class="facebook-video">
               <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCiudaddeRefugioBeulah%2Fvideos%2F2025959738127786%2F&show_text=false&width=800"
+                width="100%"
+                height="100%"
                 scrolling="no"
                 frameborder="0"
                 allowfullscreen="true"
